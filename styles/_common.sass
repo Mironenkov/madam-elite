@@ -1,0 +1,561 @@
+body
+  font-family: $font-base
+  font-size: $font-size-base
+  color: $color-base
+  height: 100%
+  line-height: 1.1
+  background-color: #f7f7f7
+a
+  text-decoration: none
+textarea
+  resize: none
+
+.main
+  margin: 0 auto
+  max-width: 1580px
+
+.main-title
+  font-size: 26px
+  text-transform: uppercase
+  color: $color-base
+  font-family: $Gothic
+  text-align: center
+  margin-bottom: 40px
+
+.btn
+  display: inline-block
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  background-color: $main-color-theme
+  padding: 10px
+  text-align: center
+  +border-radius(5px)
+  +transition(0.2s linear)
+  &:hover
+    background-color: #e92552
+
+//Header
+.header-block
+  +clearfix
+.header-block__logo
+  float: left
+  margin-right: 40px
+.header-logo
+  height: 60px
+  padding-left: 10px
+  +flexbox
+  +align-items(center)
+.header-logo__text
+  font-size: 14px
+  color: $main-color-theme
+  font-family: $Gothic
+  margin-left: 20px
+.header-block__phone
+  float: left
+  margin-right: 20px
+.header-phone
+  line-height: 60px
+  font-size: 20px
+.header-block__addr
+  float: left
+  //margin: 0 20px 0 0
+.header-addr
+  font-size: 12px
+  height: 60px
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+.header-block__nav
+  float: right
+.header-nav
+  ul
+    +clearfix
+.header-nav__li
+  float: left
+  margin: 0 20px 0 0
+  &:last-child
+    margin: 0
+    position: relative
+    &:hover .header-nav-course
+      display: block
+.header-nav__link
+  display: inline-block
+  line-height: 60px
+  font-size: 14px
+  font-family: $Gothic
+  text-transform: uppercase
+  padding: 0 5px
+  color: $color-text-base
+.header-nav-link--course
+  width: 260px
+  background-color: $main-color-theme
+  color: #fff
+  text-align: center
+.header-nav-course
+  display: none
+  position: absolute
+  left: 0
+  top: 60px
+  z-index: 999999
+  width: 100%
+  background-color: $main-color-theme
+.header-nav-course__link
+  display: block
+  text-align: center
+  padding: 10px 0
+  text-transform: uppercase
+  color: #fff
+  font-family: $GothicBold
+  font-size: 12px
+  &:hover
+    background-color: rgba(255,255,255,0.3)
+
+//description
+.me-description
+  position: relative
+.me-description-video
+  img
+    width: 100%
+    height: 100%
+    display: block
+.me-description-title-wrap
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%
+  +flexbox
+  +align-items(center)
+  +justify-content(center)
+.me-description-title
+  max-width: 800px
+  font-size: 48px
+  line-height: 50px
+  font-family: $Gothic
+  color: #fff
+  text-align: center
+.me-description-title__span
+  font-family: $GothicBold
+
+//Button
+.me-button
+  background-color: $main-color-theme
+  padding: 0px 8px
+  text-align: center
+.me-button__btn
+  background-color: transparent
+  font-size: 30px
+  color: #fff
+  text-transform: uppercase
+
+//Advantages
+.me-advantages
+  padding: 120px 0px 50px
+  .main
+    max-width: 1156px
+.me-advantages-wrap
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.me-advantages-item
+  min-width: 260px
+  max-width: 350px
+  width: 100%
+  margin-bottom: 20px
+  text-align: center
+.me-advantages-item__image
+  width: 213px
+  height: 207px
+  margin: 0px auto 10px
+//.me-advantages--image_1
+//  background: url(../images/adv_1.png) no-repeat center
+//.me-advantages--image_2
+//  background: url(../images/adv_2.png) no-repeat center
+//.me-advantages--image_3
+//  background: url(../images/adv_3.png) no-repeat center
+//.me-advantages--image_4
+//  background: url(../images/adv_4.png) no-repeat center
+//.me-advantages--image_5
+//  background: url(../images/adv_5.png) no-repeat center
+//.me-advantages--image_6
+//  background: url(../images/adv_6.png) no-repeat center
+//.me-advantages-item:hover
+.me-advantages--image_1
+  background: url(../images/adv_1_hover.png) no-repeat center
+.me-advantages--image_2
+  background: url(../images/adv_2_hover.png) no-repeat center
+.me-advantages--image_3
+  background: url(../images/adv_3_hover.png) no-repeat center
+.me-advantages--image_4
+  background: url(../images/adv_4_hover.png) no-repeat center
+.me-advantages--image_5
+  background: url(../images/adv_5_hover.png) no-repeat center
+.me-advantages--image_6
+  background: url(../images/adv_6_hover.png) no-repeat center
+.me-advantages-item__title
+  font-family: $HelveticaBold
+  margin-bottom: 10px
+.me-advantages-item__text
+  font-size: 14px
+
+//Popular
+.me-popular
+  padding: 0px 0px 80px
+.me-popular-wrap
+  +flexbox
+  +justify-content(space-between)
+.me-popular__item
+  +flex(1 1 0%)
+.me-popular__item:nth-child(2)
+  margin: 0px 20px
+.me-popular-item
+  width: 100%
+.me-popular-item__title
+  background-color: $main-color-theme
+  position: relative
+  height: 100px
+  +flexbox
+  +justify-content(center)
+  +align-items(center)
+.me-popular-title
+  text-align: center
+  font-size: 22px
+  text-transform: uppercase
+  font-family: $Gothic
+  color: #fff
+  max-width: 392px
+  padding: 0px 0px 0px 40px
+  box-sizing: border-box
+.me-popular-title--ico
+  position: absolute
+  left: 4%
+  top: 30%
+.me-popular-item__body
+  height: 370px
+  padding: 30px
+  +flexbox
+  +align-items(flex-end)
+.me-popular-body--image_1
+  background: url("../images/share_1.jpg") no-repeat center
+  background-size: cover
+.me-popular-body--image_2
+  background: url("../images/share_2.jpg") no-repeat center
+  background-size: cover
+.me-popular-body--image_3
+  background: url("../images/share_3.jpg") no-repeat center
+  background-size: cover
+.me-popular-block
+  background-color: rgba(255,255,255,0.7)
+  width: 100%
+  padding: 20px 5px
+  text-align: center
+.me-popular-price
+  font-size: 50px
+  line-height: 56px
+  color: $main-color-theme
+  font-family: $GothicBold
+.me-popular-price__old
+  font-size: 24px
+  line-height: 30px
+  color: #3b4348
+  margin-right: 15px
+  text-decoration: line-through
+  font-family: $Gothic
+.me-popular-block__text
+  color: $main-color-theme
+  margin: 15px 0px
+.me-popular-btn
+  max-width: 300px
+  width: 100%
+
+//Courses
+.me-courses-block
+  +flexbox
+.me-courses-block__item
+  +flex(1 1 0%)
+.me-courses-logo
+  position: relative
+  height: 440px
+  img
+    width: 100%
+    height: 100%
+.me-courses-logo__info
+  position: absolute
+  left: 25px
+  bottom: 25px
+.me-courses-logo-info
+  padding: 16px 15px 20px
+  background-color: rgba(255,255,255,0.7)
+  color: $color-text-base
+.me-courses-logo-info__date
+  margin-right: 30px
+  &::before
+    content: url("../images/ico_calendar.png")
+    margin-right: 15px
+    position: relative
+    top: 4px
+.me-courses-logo-info__schedule
+  &::before
+    content: url("../images/ico_time.png")
+    margin-right: 15px
+    position: relative
+    top: 4px
+.me-courses-description-wrap
+  +flexbox
+.me-courses-description
+  padding: 30px
+  text-align: left
+  +flex(2 1 0%)
+  +order(1)
+.me-courses-description__title
+  font-size: 22px
+  font-family: $Gothic
+  color: $main-color-theme
+  text-transform: uppercase
+  margin-bottom: 30px
+.me-courses-description__text
+  margin-bottom: 10px
+.me-courses-description__price-old
+  font-size: 24px
+  line-height: 30px
+  color: #3b4348
+  text-decoration: line-through
+  font-family: $Gothic
+.me-courses-description__price
+  font-size: 50px
+  line-height: 56px
+  color: $main-color-theme
+  font-family: $GothicBold
+  margin-bottom: 10px
+.me-courses-description__share
+  color: $main-color-theme
+  margin-bottom: 35px
+.me-courses-description-btn
+  width: 160px
+.me-courses-ico
+  text-align: right
+  padding: 30px
+  +flex(1 1 0%)
+  +order(2)
+.me-courses-block:nth-child(even)
+  .me-courses-ico
+    text-align: left
+    +order(1)
+  .me-courses-description
+    text-align: right
+    +order(2)
+  .me-courses-logo__info
+    left: auto
+    right: 25px
+
+//Social
+.me-social
+  padding: 50px 0
+  background-color: $main-color-theme
+  .main
+    max-width: 1156px
+.me-social-wrap
+  +flexbox
+  +align-items(center)
+.me-social-wrap__text
+  font-size: 18px
+  line-height: 24px
+  color: #fff
+  text-transform: uppercase
+  margin-right: 80px
+.me-social-icon
+  height: 60px
+  width: 60px
+  background-color: #fff
+  font-size: 40px
+  color: $main-color-theme
+  display: -webkit-inline-flex
+  display: inline-flex
+  margin-right: 20px
+  +border-radius(50%)
+  +align-items(center)
+  +justify-content(center)
+
+//Reviews
+.me-reviews
+  padding: 120px 0px 60px
+  background-color: #e8e8e8
+  .main
+    max-width: 1156px
+  .lSSlideOuter .lSPager.lSpg > li
+    padding: 0 20px
+    a
+      width: 15px
+      height: 15px
+      background-color: #999999
+    &:hover a, &.active a
+      background-color: $main-color-theme
+.me-reviews-block
+  +flexbox
+  +flex-wrap(wrap)
+.me-reviews-block__item
+  +flex(1 1 0%)
+.me-reviews-info
+  background-color: #fff
+  margin: 0px 20px 0px 0px
+  position: relative
+  padding: 35px
+  box-sizing: border-box
+  height: 370px
+  +border-radius(10px)
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    margin-top: -16px
+    right: -20px
+    border-style: solid
+    border-width: 16px 0 16px 20px
+    border-color: transparent transparent transparent #ffffff
+.me-reviews-info__title
+  margin: 0px 0px 30px
+.me-reviews-info-title
+  +flexbox
+  +flex-wrap(wrap)
+.me-reviews-info-title__photo
+  margin: 0px 30px 0px 0px
+.me-reviews-info-title__name
+  font-size: 18px
+  font-family: $HelveticaBold
+  +flexbox
+  +align-items(center)
+.me-reviews-info__text
+  text-align: justify
+  font-style: italic
+.me-reviews-info__quote
+  position: absolute
+  left: 10px
+  top: 10px
+.me-reviews-video
+  margin-left: 20px
+  height: 370px
+  img
+    width: 100%
+    height: 100%
+
+//Gallery
+.me-gallery-block
+  +flexbox
+.me-gallery-block__item
+  +flex(1 1 0%)
+.me-gallery-item
+  position: relative
+  img
+    width: 100%
+    height: 100%
+    -webkit-filter: grayscale(100%)
+    -ms-filter: grayscale(100%)
+    filter: grayscale(100%)
+    display: block
+  &:hover
+    .me-gallery-hover
+      opacity: 1
+.me-gallery-hover
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%
+  background-color: rgba(213,33,74,0.7)
+  color: #fff
+  font-size: 12px
+  line-height: 16px
+  text-align: center
+  padding: 20px
+  box-sizing: border-box
+  opacity: 0
+  cursor: pointer
+  +transition(0.2s ease-in)
+  +flexbox
+  +align-items(center)
+  +justify-content(center)
+
+//Footer
+.footer
+  background-color: #3b4348
+  padding: 30px 0px 50px
+.footer-wrap
+  +flexbox
+  +flex-wrap(wrap)
+.footer-wrap__item
+  border-right: 1px solid #999999
+  padding: 0px 40px
+  text-align: center
+  &:last-child
+    border-right: none
+  +flex(1 1 0%)
+.footer--title
+  color: #fff
+  font-family: $Gothic
+  line-height: 18px
+  min-height: 36px
+  margin-bottom: 15px
+.footer-social__link
+  display: -webkit-inline-flex
+  display: inline-flex
+  width: 30px
+  height: 30px
+  background-color: #999999
+  color: #3b4348
+  font-size: 20px
+  margin: 0px 5px 10px
+  +border-radius(50%)
+  +align-items(center)
+  +justify-content(center)
+  &:hover
+    background-color: $main-color-theme
+.footer-menu__link, .footer-school-list__link
+  display: inline-block
+  font-family: $GothicBold
+  text-transform: uppercase
+  color: #fff
+  margin: 0px 0px 10px
+  font-size: 12px
+  &:hover
+    color: $main-color-theme
+.footer-saloon__image
+  display: block
+  width: 81px
+  height: 149px
+  margin: 0px auto
+  background: url("../images/logo_footer.png") 0px 0px no-repeat
+  &:hover
+    background: url("../images/logo_footer.png") -81px 0px no-repeat
+.footer-call_back-input
+  display: block
+  width: 100%
+  background-color: #62696d
+  padding: 10px
+  color: #fff
+  margin-bottom: 10px
+  box-sizing: border-box
+  +border-radius(5px)
+.footer-call_back-btn
+  width: 100%
+  background-color: #fff
+  color: $main-color-theme
+  &:hover
+    color: #fff
+    background-color: $main-color-theme
+.footer-logo__image
+  display: block
+  margin: 0px auto 15px
+  width: 176px
+  height: 60px
+  background: url("../images/logo_footer2.png") 0px 0px no-repeat
+  &:hover
+    background: url("../images/logo_footer2.png") -176px 0px no-repeat
+.footer-logo__address
+  color: #fff
+  font-size: 14px
+  line-height: 20px
+.footer-copy
+  margin-top: 20px
+  color: #fff
+  font-size: 12px
