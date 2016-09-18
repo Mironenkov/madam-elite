@@ -9,6 +9,15 @@ a
   text-decoration: none
 textarea
   resize: none
+input[placeholder]
+  &:focus::-webkit-input-placeholder
+    color: transparent
+  &:focus::-moz-placeholder
+    color: transparent
+  &:focus:-moz-placeholder
+    color: transparent
+  &:focus:-ms-input-placeholder
+    color: transparent
 
 .main
   margin: 0 auto
@@ -35,7 +44,56 @@ textarea
   &:hover
     background-color: #e92552
 
+.me-subscribe
+  position: fixed
+  left: 0px
+  bottom: 0px
+  width: 100%
+  background-color: $main-color-theme
+  z-index: 9999999
+.me-subscribe-wrap
+  height: 60px
+  position: relative
+  +flexbox
+  +justify-content(center)
+  +align-items(center)
+  &::before
+    content: ''
+    border-style: solid
+    border-width: 0 30px 30px 30px
+    border-color: transparent transparent $main-color-theme transparent
+    position: absolute
+    left: 5px
+    top: -30px
+.me-subscribe__text
+  color: #fff
+  font-family: $Gothic
+  margin-right: 60px
+.me-subscribe__input
+  padding: 10px
+  border: 1px solid #fff
+  background-color: rgba(#fff, 0.2)
+  color: #fff
+  margin-right: 20px
+  width: 175px
+  +border-radius(5px)
+  &::-webkit-input-placeholder
+    color: #fff
+  &::-moz-placeholder
+    color: #fff
+  &:-moz-placeholder
+    color: #fff
+  &::-ms-input-placeholder
+    color: #fff
+.me-subscribe__btn
+  background-color: #fff
+  width: 175px
+  color: $main-color-theme
+  &:hover
+    color: #fff
 //Header
+.header
+  background-color: #fff
 .header-block
   +clearfix
 .header-block__logo
@@ -479,7 +537,7 @@ textarea
 //Footer
 .footer
   background-color: #3b4348
-  padding: 30px 0px 50px
+  padding: 30px 0px 40px
 .footer-wrap
   +flexbox
   +flex-wrap(wrap)
@@ -557,5 +615,134 @@ textarea
   line-height: 20px
 .footer-copy
   margin-top: 20px
+  padding: 0px 10px
   color: #fff
   font-size: 12px
+
+//Products
+.me-products
+  padding: 110px 0px 0px
+  .main
+    max-width: 1200px
+.me-products__title
+  margin-bottom: 60px
+.me-products-title
+  position: relative
+  display: inline-block
+  &::before
+    content: ''
+    display: block
+    width: 100px
+    height: 33px
+    background: url("../images/title_sprite.png")
+    background-position: 0px 0px
+    position: absolute
+    top: 50%
+    margin-top: -16px
+    left: -180px
+  &::after
+    content: ''
+    display: block
+    width: 100px
+    height: 33px
+    background: url("../images/title_sprite.png")
+    background-position: -100px 0px
+    position: absolute
+    top: 50%
+    margin-top: -16px
+    right: -180px
+.me-products-filter
+  margin-bottom: 40px
+  font-family: $HelveticaBold
+  +flexbox
+  +align-items(center)
+.me-products-filter__parametr
+  margin-right: 20px
+.me-products-filter__select
+  padding: 10px
+  border: 1px solid #999999
+  margin-right: 10%
+  width: 176px
+  font-size: 12px
+  +border-radius(5px)
+.me-products-block
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.me-products-item
+  padding: 10px 20px
+  border: 1px solid #dedede
+  background-color: #fff
+  position: relative
+  min-width: 275px
+  max-width: 275px
+  box-sizing: border-box
+  margin-bottom: 20px
+  &:hover
+    .me-products-item__hover
+      opacity: 1
+    .me-products-item__title
+      text-decoration: underline
+      color: $main-color-theme
+.me-products-item__image
+  height: 150px
+  margin-bottom: 5px
+  img
+    display: block
+    width: 100%
+    height: 100%
+.me-products-item__title
+  font-size: 14px
+  line-height: 16px
+  font-family: $HelveticaRegular
+  margin-bottom: 5px
+  color: $color-text-base
+.me-products-item-info
+  font-size: 12px
+  line-height: 14px
+  color: #999999
+  &:last-child
+    margin-bottom: 10px
+.me-products-item-info__parametr
+  font-family: $HelveticaBold
+  margin-right: 5px
+.me-products-item-info__text
+  font-family: $HelveticaRegular
+.me-products-item__price
+  font-family: $HelveticaBold
+  color: $main-color-theme
+.me-products-item__hover
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%
+  background-color: rgba($main-color-theme, 0.2)
+  opacity: 0
+  border: 3px solid #dedede
+  box-sizing: border-box
+  padding-bottom: 45%
+  +flexbox
+  +justify-content(center)
+  +align-items(center)
+  +transition(0.1s linear)
+  .btn
+    width: 175px
+
+//Pager
+.me-pager
+  padding: 40px 0px
+  .main
+    max-width: 1200px
+.me-pager__link
+  font-family: $HelveticaBold
+  color: $main-color-theme
+  padding: 12px
+  &:hover
+    background-color: $main-color-theme
+    color: #fff
+.me-pager-link--arrow
+  background-color: #e8e8e8
+.me-pager-link--active
+  background-color: $main-color-theme
+  color: #fff
