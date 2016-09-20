@@ -145,11 +145,15 @@ input[placeholder]
   text-transform: uppercase
   padding: 0 5px
   color: $color-text-base
+  &:hover
+    color: $main-color-theme
 .header-nav-link--course
   width: 260px
   background-color: $main-color-theme
   color: #fff
   text-align: center
+  &:hover
+    color: #fff
 .header-nav-course
   display: none
   position: absolute
@@ -746,3 +750,197 @@ input[placeholder]
 .me-pager-link--active
   background-color: $main-color-theme
   color: #fff
+  
+//Courses_description
+.me-courses_description
+  background: url("../images/bg-course_description.png") no-repeat center
+  background-size: cover
+.me-courses_description-wrap
+  height: 180px
+  +flexbox
+  +justify-content(center)
+  +align-items(center)
+.me-courses_description-wrap__title
+  font-size: 26px
+  text-transform: uppercase
+  color: #fff
+  font-family: $Gothic
+  text-align: center
+
+//Courses_popular
+.me-courses_popular
+  padding: 20px 0px 50px
+  .me-popular-title
+    padding: 0px
+    max-width: 100%
+  .me-popular-item__title
+    padding: 10px 0px
+    +flex-direction(column)
+  .me-popular-title--info
+    margin-bottom: 20px
+  .me-courses-logo-info__date
+    font-size: 16px
+    &::before
+      content: url("../images/ico_calendar_white.png")
+  .me-courses-logo-info__schedule
+    font-size: 16px
+    &::before
+      content: url("../images/ico_time_white.png")
+  .me-popular-title--programm
+    font-size: 16px
+  .me-popular-block__ico
+    margin-bottom: 20px
+.me-courses_page
+  .main
+    max-width: 1200px
+.me-courses-description--page
+  padding: 0px 30px 30px
+  text-align: left
+  +flex(2 1 0%)
+.me-courses-block--page
+  margin-bottom: 50px
+  +flexbox
+  .me-courses-description__title
+    background-color: #e8e8e8
+    padding: 30px 15px
+    margin: 0px 0px 20px 0px
+  .me-courses-description__text
+    margin-bottom: 30px
+    li
+      font-size: 18px
+      line-height: 20px
+      margin: 0px 0px 10px 30px
+      position: relative
+      &::before
+        content: ''
+        display: block
+        width: 20px
+        height: 20px
+        background: url("../images/before-li.png") no-repeat
+        position: absolute
+        top: 50%
+        margin-top: -10px
+        left: -30px
+  .me-courses-description__price
+    +clearfix
+  .me-courses-description__share
+    float: right
+    font-size: 16px
+    font-family: $HelveticaRegular
+    position: relative
+    &::before
+      content: ''
+      display: block
+      width: 13px
+      height: 12px
+      background: url("../images/before-star.png") no-repeat
+      position: absolute
+      left: -28px
+      top: 50%
+      margin-top: -6px
+  .me-courses-description-price
+    float: left
+
+//Income
+.me-income
+  padding: 80px 0px
+  background: url("../images/bg-income.png") no-repeat
+  background-size: cover
+  .main
+    max-width: 1200px
+.me-income-item
+  max-width: 750px
+  background-color: #fff
+  padding: 25px 30px
+  position: relative
+  +border-radius(10px)
+  &::after
+    content: ''
+    border-style: solid
+    border-width: 17px 0 17px 20px
+    border-color: transparent transparent transparent #ffffff
+    position: absolute
+    top: 50%
+    margin-top: -17px
+    right: -20px
+.me-income-item__title
+  font-size: 22px
+  text-transform: uppercase
+  font-family: $GothicBold
+  color: $main-color-theme
+  margin-bottom: 30px
+.me-income-item__text
+  min-height: 145px
+  text-align: justify
+
+//Video
+.me-video
+  padding: 50px 0px
+  .main
+    max-width: 1200px
+.me-video-wrap
+  img
+    width: 100%
+    height: 100%
+    display: block
+
+//Rating
+.me-rating
+  padding: 50px 0px
+  .main
+    max-width: 1200px
+.me-rating__text
+  text-align: center
+  font-family: $Gothic
+  margin-bottom: 50px
+.me-rating-wrap
+  +flexbox
+  +flex-wrap(wrap)
+.me-rating-wrap__item
+  +flex(1 1 0%)
+.me-rating-item
+  height: 224px
+  width: 224px
+  background-color: #eeeeee
+  background-repeat: no-repeat
+  margin: 0px auto 50px
+  text-align: center
+  position: relative
+  +flexbox
+  +flex-direction(column)
+  +align-items(center)
+  +justify-content(center)
+  +border-radius(50%)
+.me-rating-item--first
+  background-image: url("../images/rating-img-1.png")
+.me-rating-item--second
+  background-image: url("../images/rating-img-2.png")
+.me-rating-item--third
+  background-image: url("../images/rating-img-3.png")
+.me-rating-item__number
+  font-size: 40px
+  text-transform: uppercase
+  color: $main-color-theme
+  margin-bottom: 5px
+  font-family: $GothicBold
+.me-rating-item__text
+  font-size: 18px
+  line-height: 20px
+  height: 40px
+  font-family: $Gothic
+  max-width: 80%
+.me-rating-steps
+  padding: 20px
+  min-height: 100px
+  box-sizing: border-box
+  background-color: #e8e8e8
+  +flexbox
+  +flex-wrap(wrap)
+  +align-items(center)
+.me-rating-steps__item
+  +flex(1 1 0%)
+.me-rating-steps__item
+  font-size: 18px
+  line-height: 20px
+  text-transform: uppercase
+  font-family: $Gothic
