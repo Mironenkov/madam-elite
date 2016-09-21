@@ -886,7 +886,7 @@ input[placeholder]
 
 //Rating
 .me-rating
-  padding: 50px 0px
+  padding: 50px 0px 100px
   .main
     max-width: 1200px
 .me-rating__text
@@ -944,3 +944,44 @@ input[placeholder]
   line-height: 20px
   text-transform: uppercase
   font-family: $Gothic
+.me-rating-steps__text
+  font-family: $HelveticaRegular
+  font-size: 16px
+  text-transform: lowercase
+  width: 190px
+  display: block
+  margin: 0px auto
+  position: relative
+.me-rating-steps-text--first::before
+  content: url("../images/before-rating-1.png")
+  position: absolute
+  left: -50px
+  top: 50%
+  margin-top: -20px
+.me-rating-steps-text--first:after
+  content: url("../images/after-rating-arrow.png")
+  position: absolute
+  right: 0px
+  top: 50%
+  margin-top: -10px
+.me-rating-steps-text--second::before
+  content: url("../images/before-rating-2.png")
+  position: absolute
+  left: -50px
+  top: 50%
+  margin-top: -17px
+.me-rating-steps-text--second:after
+  content: url("../images/after-rating-arrow.png")
+  position: absolute
+  right: 0px
+  top: 50%
+  margin-top: -10px
+.me-rating-steps-text--third::before
+  content: url("../images/before-rating-3.png")
+  position: absolute
+  left: -50px
+  top: 50%
+  margin-top: -20px
+
+.me-rating + .me-reviews + .me-advantages
+  padding-top: 70px
