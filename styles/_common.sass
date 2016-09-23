@@ -39,6 +39,8 @@ input[placeholder]
   background-color: $main-color-theme
   padding: 10px
   text-align: center
+  box-sizing: border-box
+  font-family: $HelveticaRegular
   +border-radius(5px)
   +transition(0.2s linear)
   &:hover
@@ -91,6 +93,8 @@ input[placeholder]
   color: $main-color-theme
   &:hover
     color: #fff
+    background-color: #e92552
+
 //Header
 .header
   background-color: #fff
@@ -826,8 +830,11 @@ input[placeholder]
   .me-courses-description__share
     float: right
     font-size: 16px
+    line-height: 18px
     font-family: $HelveticaRegular
     position: relative
+    width: 200px
+    text-align: right
     &::before
       content: ''
       display: block
@@ -835,7 +842,7 @@ input[placeholder]
       height: 12px
       background: url("../images/before-star.png") no-repeat
       position: absolute
-      left: -28px
+      left: -10px
       top: 50%
       margin-top: -6px
   .me-courses-description-price
@@ -982,6 +989,330 @@ input[placeholder]
   left: -50px
   top: 50%
   margin-top: -20px
-
 .me-rating + .me-reviews + .me-advantages
   padding-top: 70px
+
+//Course_card
+.me-course_description
+  background: url("../images/bg-description-courses_card.png") no-repeat center
+  background-size: cover
+.me-course_description-wrap
+  font-family: $Gothic
+  text-align: center
+  padding: 50px 0px 150px
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+.me-course_description-time
+  margin-bottom: 70px
+.me-course_description-time__date
+  font-size: 28px
+  color: $main-color-theme
+.me-course_description-time__text
+  font-size: 18px
+  color: #fff
+.me-course_description-title
+  margin-bottom: 60px
+.me-course_description-title__main
+  font-size: 28px
+  text-transform: uppercase
+  color: #fff
+  margin-bottom: 30px
+.me-course_description-title__sub
+  font-size: 18px
+  color: #fff
+.me-course_description-price
+  font-size: 60px
+  color: $main-color-theme
+  margin-bottom: 100px
+  font-family: $GothicBold
+.me-course_description-btn
+  .btn
+    padding: 20px 30px
+    font-size: 16px
+
+//Programm
+.me-programm
+  padding: 80px 0px
+  .main
+    max-width: 1200px
+.me-programm-block
+  margin-bottom: 30px
+  +flexbox
+  +flex-wrap(wrap)
+.me-programm-block__image
+  max-width: 470px
+  +flex(2 1 0%)
+.me-programm-image
+  height: 220px
+  padding: 20px
+  box-sizing: border-box
+  +flexbox
+  +align-items(flex-end)
+  +justify-content(flex-start)
+.me-programm-image--first
+  background: url("../images/programm-img_1.jpg") no-repeat center
+  background-size: cover
+.me-programm-image--second
+  background: url("../images/programm-img_2.jpg") no-repeat center
+  background-size: cover
+.me-programm-image--third
+  background: url("../images/programm-img_3.jpg") no-repeat center
+  background-size: cover
+.me-programm-block__info
+  margin-left: 20px
+  +flex(3 1 0%)
+.me-programm-info__title
+  background-color: #e8e8e8
+  padding: 30px 15px
+  margin: 0px 0px 20px 0px
+  font-size: 22px;
+  font-family: $Gothic
+  color: #d5214a
+  text-transform: uppercase
+.me-programm-info__text
+  text-align: justify
+.me-programm-image__time
+  padding: 10px 15px 15px
+  background-color: rgba(255,255,255,0.7)
+  color: #666
+  width: 300px
+.me-programm-time::before
+  content: url(../images/ico_time.png)
+  margin-right: 10px
+  position: relative
+  top: 4px
+
+//Teacher
+.me-teacher
+  padding: 80px 0px 60px
+  background-color: #e8e8e8
+  .main
+    max-width: 960px
+  .lSSlideOuter .lSPager.lSpg
+    position: absolute
+    right: 0px
+    top: 0px
+    > li
+      display: block
+      margin: 30px 0px
+      a
+        width: 15px
+        height: 15px
+        background-color: #999
+        &:hover
+          background-color: $main-color-theme
+      &.active a
+        background-color: $main-color-theme
+.me-teacher__title
+  margin-bottom: 80px
+.me-teacher-block
+  padding-right: 50px
+  +flexbox
+.me-teacher-block__photo
+  max-width: 240px
+  min-width: 240px
+  height: 240px
+  +flex(1 1 0%)
+  img
+    width: 100%
+    height: 100%
+    display: block
+.me-teacher-block__info
+  margin-left: 20px
+  +flex(2 1 0%)
+.me-teacher-info
+  padding: 30px 70px
+  position: relative
+.me-teacher-info__title
+  font-size: 18px
+  font-family: $HelveticaBold
+  margin-bottom: 10px
+.me-teacher-info__job
+  margin-bottom: 25px
+  font-size: 14px
+.me-teacher-info__text
+  text-align: justify
+  font-style: italic
+.me-teacher-info__quote
+  width: 50px
+  height: 45px
+  background: url("../images/quote.png") no-repeat center
+  position: absolute
+.me-teacher-info-quote--top
+  top: 0px
+  left: 0px
+  +transform(rotate(180deg))
+.me-teacher-info-quote--bot
+  right: 0px
+  bottom: 0px
+
+//Porfolio
+.me-portfolio
+  background-color: #e8e8e8
+
+//Form
+.me-form
+  background-color: $main-color-theme
+  padding: 70px 0px
+  text-align: center
+  .main
+    position: relative
+.me-form__title
+  color: #fff
+.me-form-wrap
+  margin-bottom: 20px
+  .btn
+    background-color: #fff
+    color: $main-color-theme
+    width: 175px
+    height: 50px
+    font-size: 16px
+    &:hover
+      background-color: #f96b8c
+      color: #fff
+.me-form-input
+  font-size: 18px
+  display: inline-block
+  max-width: 400px
+  width: 100%
+  background-color: #fff
+  color: $main-color-theme
+  height: 50px
+  box-sizing: border-box
+  padding: 15px 10px
+  margin-right: 15px
+  +border-radius(5px)
+.me-form__text
+  color: #fff
+  font-family: $HelveticaRegular
+.me-form-ribbon
+  width: 312px
+  height: 300px
+  background: url("../images/ribbon.png") no-repeat center
+  box-sizing: border-box
+  position: absolute
+  left: 0px
+  top: -96px
+  +flexbox
+  +align-items(center)
+  +justify-content(flex-end)
+.me-form-ribbon-price
+  color: #fff
+  text-align: center
+  padding-right: 25px
+.me-form-ribbon-price__old
+  font-family: $HelveticaRegular
+  text-decoration: line-through
+  font-size: 28px
+.me-form-ribbon-price__new
+  font-size: 46px
+  line-height: 48 px
+  font-family: $GothicBold
+
+//Star
+.me-start
+  padding: 70px 0px 40px
+  border-bottom: 2px solid $main-color-theme
+  .main
+    max-width: 1200px
+.me-start__title
+  margin-bottom: 100px
+.me-start-block
+  margin-bottom: 60px
+  +flexbox
+  +flex-wrap(wrap)
+.me-start-block__item
+  +flex(1 1 0%)
+.me-start-item
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(center)
+  +align-items(center)
+.me-start-item__info
+  margin-left: 20px
+  font-family: $Gothic
+.me-start-item-info__title
+  font-size: 18px
+  color: #3b4348
+  text-transform: uppercase
+  margin-bottom: 10px
+.me-start-item-info__text
+  font-size: 34px
+  color: $main-color-theme
+.me-start-btn
+  text-align: center
+  .btn
+    width: 175px
+    height: 50px
+
+//Group
+.me-group
+  padding: 40px 0px 60px
+  .main
+    max-width: 1200px
+.me-group__title
+  margin-bottom: 30px
+.me-group__text
+  font-size: 18px
+  text-align: center
+  font-family: $Gothic
+  margin-bottom: 60px
+.me-group-block
+  +flexbox
+  +flex-wrap(wrap)
+.me-group-block__item
+  +flex(1 1 0%)
+.me-group-info__title
+  font-family: $Gothic
+  margin-bottom: 10px
+.me-group-time__item
+  +flexbox
+  +flex-wrap(wrap)
+.me-group-time-item
+  margin-right: 40px
+  +flexbox
+  +flex-wrap(wrap)
+  +align-items(center)
+.me-group-time-item__number
+  width: 24px
+  height: 24px
+  background-color: $main-color-theme
+  margin-right: 10px
+  color: #fff
+  +border-radius(50%)
+  +flexbox
+  +align-items(center)
+  +justify-content(center)
+.me-group-time-item__text
+  font-family: $HelveticaRegular
+.me-group-form__input
+  font-size: 18px
+  display: inline-block
+  max-width: 400px
+  width: 100%
+  color: $main-color-theme
+  height: 50px
+  box-sizing: border-box
+  padding: 15px 10px
+  margin-right: 15px
+  background-color: #fff
+  border: 1px solid #d2d2d2
+  +border-radius(5px)
+.me-group-form
+  .btn
+    width: 175px
+    height: 50px
+    font-size: 16px
+
+//Why
+.me-why
+  padding: 70px 0px
+  background-color: $main-color-theme
+.me-why__title
+  color: #fff
+.me-why-block
+  +flexbox
+  +flex-wrap(wrap)
+.me-why-block__item
+  +flex(1 1 0%)
