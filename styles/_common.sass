@@ -270,8 +270,9 @@ input[placeholder]
   padding: 0px 0px 80px
 .me-popular-wrap
   +flexbox
-  +justify-content(space-between)
+  +justify-content(space-around)
 .me-popular__item
+  max-width: 32%
   +flex(1 1 0%)
 .me-popular__item:nth-child(2)
   margin: 0px 20px
@@ -300,6 +301,8 @@ input[placeholder]
 .me-popular-item__body
   height: 370px
   padding: 30px
+  background-size: cover
+  background-repeat: no-repeat
   +flexbox
   +align-items(flex-end)
 .me-popular-body--image_1
@@ -833,7 +836,6 @@ input[placeholder]
     line-height: 18px
     font-family: $HelveticaRegular
     position: relative
-    width: 200px
     text-align: right
     &::before
       content: ''
@@ -842,9 +844,8 @@ input[placeholder]
       height: 12px
       background: url("../images/before-star.png") no-repeat
       position: absolute
-      left: -10px
-      top: 50%
-      margin-top: -6px
+      left: -20px
+      top: 10%
   .me-courses-description-price
     float: left
 
@@ -1309,10 +1310,151 @@ input[placeholder]
 .me-why
   padding: 70px 0px
   background-color: $main-color-theme
+  .main
+    max-width: 1200px
+  .lSSlideOuter .lSPager.lSpg > li
+    a
+      width: 16px
+      height: 16px
+      background-color: #3b4348
+      margin: 0px 20px
+      &:hover
+        background-color: #ffffff
+  .lSSlideOuter .lSPager.lSpg > li.active
+    a
+      background-color: #ffffff
+.me-why__title
+  margin-bottom: 60px
 .me-why__title
   color: #fff
 .me-why-block
   +flexbox
   +flex-wrap(wrap)
+  +align-items(center)
 .me-why-block__item
   +flex(1 1 0%)
+  +flexbox
+  +justify-content(center)
+.me-why-block-logo
+  max-width: 530px
+  text-align: center
+  font-size: 34px
+  line-height: 36px
+  font-family: $HelveticaRegular
+  color: #fff
+  text-transform: uppercase
+.me-why-block-logo__bold
+  font-size: 46px
+  line-height: 48px
+  font-family: $HelveticaBold
+.me-why-block-content
+  background-color: #fff
+  padding: 30px 20px
+  max-width: 567px
+  height: 180px
+  box-sizing: border-box
+  position: relative
+  +border-radius(20px)
+  &::before
+    content: ''
+    border-style: solid
+    border-width: 18px 20px 18px 0
+    border-color: transparent #ffffff transparent transparent
+    position: absolute
+    top: 50%
+    margin-top: -18px
+    left: -20px
+.me-why-block-content__title
+  font-size: 18px
+  font-family: $Gothic
+  text-transform: uppercase
+  margin-bottom: 20px
+  color: #3b4348
+.me-why-block-content__text
+  font-size: 18px
+  font-family: $HelveticaRegular
+  color: #3b4348
+
+//Form_classes
+.me-form_classes
+  background-color: #e8e8e8
+.me-form_classes-wrap
+  +flexbox
+  +flex-wrap(wrap)
+  +align-items(center)
+.me-form_classes-wrap__tabs
+  +flex(1 1 0%)
+.me-form_classes-wrap__content
+  +flex(4 1 0%)
+.me-form_classe-tabs
+  position: relative
+  font-family: $HelveticaBold
+  text-transform: uppercase
+  color: #999999
+  background-color: #fff
+  height: 170px
+  cursor: pointer
+  +flexbox
+  +align-items(center)
+  +justify-content(center)
+.me-form_classe-tabs--active
+  color: $main-color-theme
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    margin-top: -18px
+    right: -20px
+    border-style: solid
+    border-width: 18px 0 18px 20px
+    border-color: transparent transparent transparent #ffffff
+.me-form_classe-tabs--group
+  border-bottom: 1px solid #e8e8e8
+.me-form_classe-tabs--individual
+  border-top: 1px solid #e8e8e8
+.me-form_classes-content
+  text-align: center
+  padding: 0px 30px
+  box-sizing: border-box
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+.me-form_classes-content__title
+  font-size: 22px
+  font-family: $Gothic
+  text-transform: uppercase
+  margin-bottom: 10px
+  color: #3b4348
+.me-form_classes-content__sub_title
+  font-family: $HelveticaRegular
+  color: #3b4348
+  margin-bottom: 20px
+.me-form_classes-content-form
+  margin-bottom: 20px
+  .btn
+    height: 50px
+    width: 175px
+.me-form_classes-content-form__input
+  display: inline-block
+  background-color: #fff
+  border: 1px solid #d2d2d2
+  padding: 15px
+  box-sizing: border-box
+  max-width: 400px
+  width: 100%
+  height: 50px
+  margin-right: 20px
+  font-size: 18px
+  +border-radius(5px)
+.me-form_classes-content__prices
+  font-size: 46px
+  line-height: 48px
+  color: $main-color-theme
+  font-family: $HelveticaBold
+.me-form_classes-price_old
+  font-size: 28px
+  font-family: $HelveticaRegular
+  margin-right: 20px
+  text-decoration: line-through
+
+  
