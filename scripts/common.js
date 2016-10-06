@@ -33,11 +33,20 @@
         item:1,
         loop:true,
         slideMargin:0,
+        controls: false,
         enableDrag: false,
         galleryMargin: 0,
         thumbMargin: 3
     });
-
+    $('.me-product_review-slider').lightSlider({
+        item: 2,
+        pager: false,
+        slideMargin: 20,
+        speed: 500,
+        vertical: true,
+        enableDrag: false,
+        verticalHeight: 220
+    });
 
     ////Tabs
     $('.me-form_classes-content--individual').hide();
