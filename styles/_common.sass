@@ -1748,3 +1748,57 @@ input[placeholder]
   text-align: right
   .btn
     width: 176px
+
+//Contacts
+.me-map-wrap
+  position: relative
+  > iframe
+    width: 100%
+    -webkit-filter: grayscale(100%)
+    -moz-filter: grayscale(100%)
+    -ms-filter: grayscale(100%)
+    -o-filter: grayscale(100%)
+    filter: grayscale(100%)
+    filter: url(grayscale.svg)
+    filter: gray
+.me-map-wrap__contacts
+  position: absolute
+  left: 0px 
+  top: 50%
+  margin-top: -130px
+.me-map-contact
+  height: 260px
+  padding: 20px
+  background-color: rgba($color-base, 0.8)
+  margin-left: 20px
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+.me-map-contact__item
+  margin-bottom: 5px
+  color: #fff
+  > a
+    color: #fff
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+.me-map-contact-item__parametr
+  font-family: $HelveticaBold
+  margin-right: 5px
+
+.me-contact_form
+  border-top: 1px solid $main-color-theme
+  padding: 60px 0px
+  background: url("../images/bg_contacts.png") no-repeat center
+  background-size: cover
+  .me-product_review-form
+    max-width: 600px
+    width: 100%
+    margin: 0 auto
+    input
+      max-width: 220px
+    textarea
+      height: 72px
+.me-contact_form__title
+  color: $main-color-theme
+
