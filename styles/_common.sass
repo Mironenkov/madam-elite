@@ -689,7 +689,6 @@ input[placeholder]
 .me-products-block
   +flexbox
   +flex-wrap(wrap)
-  +justify-content(space-between)
 .me-products-item
   padding: 10px 20px
   border: 1px solid #dedede
@@ -698,7 +697,7 @@ input[placeholder]
   min-width: 275px
   max-width: 275px
   box-sizing: border-box
-  margin-bottom: 20px
+  margin: 0px 10px 20px
   &:hover
     .me-products-item__hover
       opacity: 1
@@ -1543,7 +1542,7 @@ input[placeholder]
   //background-size: cover
 .me-bg_image_first
   img
-    top: 44100px
+    top: 100px
     width: 100%
     position: absolute
 .me-bg_image_second
@@ -1562,6 +1561,8 @@ input[placeholder]
   background-position: center bottom
   background-repeat: no-repeat
   background-color: #eeeeee
+  .main
+    max-width: 1200px
 .me-about_content-text
   line-height: 20px
   text-align: justify
@@ -1610,10 +1611,12 @@ input[placeholder]
     li
       width: calc(33.3333% - 10px) !important
       margin: 5px
+      box-sizing: border-box
+      border: 2px solid transparent
       &:hover
-        +box-shadow(0px 0px 3px 0px rgba($color-base,0.75))
+        border: 2px solid $main-color-theme
     li.active
-      +box-shadow(0px 0px 8px 0px rgba($color-base,0.75))
+      border: 2px solid $main-color-theme
 .me-products_item-wrap
   +clearfix
 .me-products_item-wrap__slider
@@ -1709,7 +1712,8 @@ input[placeholder]
   float: left
   width: 45%
 .me-product_review-form
-  font-family: $Gothic
+  font-family: $GothicBold
+  font-size: 18px
   margin-bottom: 10px
 .me-product_review-form
   +clearfix
@@ -1759,8 +1763,12 @@ input[placeholder]
     -ms-filter: grayscale(100%)
     -o-filter: grayscale(100%)
     filter: grayscale(100%)
-    filter: url(grayscale.svg)
-    filter: gray
+    &:hover
+      -webkit-filter: grayscale(0%)
+      -moz-filter: grayscale(0%)
+      -ms-filter: grayscale(0%)
+      -o-filter: grayscale(0%)
+      filter: grayscale(0%)
 .me-map-wrap__contacts
   position: absolute
   left: 0px 
@@ -1802,3 +1810,50 @@ input[placeholder]
 .me-contact_form__title
   color: $main-color-theme
 
+
+.comment-reply-title
+  display: none
+.comment-notes
+  margin-bottom: 10px
+.comment-form-comment
+  margin-bottom: 10px
+  textarea
+    font-family: $Gothic
+    width: 100%
+    padding: 10px
+    box-sizing: border-box
+    background-color: #fff
+    font-size: 16px
+    border: 1px solid #d2d2d2
+    +border-radius(5px)
+.comment-form-author
+  float: left
+  width: calc(50% - 10px)
+  margin-right: 10px
+  margin-bottom: 10px
+  input
+    font-family: $Gothic
+    width: 100%
+    padding: 10px
+    box-sizing: border-box
+    background-color: #fff
+    font-size: 16px
+    border: 1px solid #d2d2d2
+    +border-radius(5px)
+.comment-form-email
+  float: left
+  width: calc(50% - 10px)
+  margin-left: 10px
+  margin-bottom: 10px
+  input
+    font-family: $Gothic
+    width: 100%
+    padding: 10px
+    box-sizing: border-box
+    background-color: #fff
+    font-size: 16px
+    border: 1px solid #d2d2d2
+    +border-radius(5px)
+.form-submit
+  clear: both
+  text-align: center
