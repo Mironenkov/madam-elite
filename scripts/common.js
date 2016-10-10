@@ -92,5 +92,34 @@
             $(".me-numbers-title--third").css("opacity","1");
             $(".me-numbers-number--third").css("opacity","1").animateNumber({ number: 100 }, 1000).removeClass('me-numbers-number--third');
         }
+        if ( st > 800 ) {
+            $('.header-block').addClass('header--fixed');
+        } else {
+            $('.header-block').removeClass('header--fixed');
+        }
     });
+
+    //Fancy
+    $(".me-gallery-item a").attr("rel", "gallery").fancybox();
+    $(".me-gallery-hover").click(function(){
+        $(".me-gallery-item a").click();
+    });
+
+    //Callback
+    $(".callback-preview-wrap").click(function(){
+        $(this).hide("slow");
+        $(".callback-wrap").animate({
+            right: "0px"
+        }, 200);
+    });
+    $(".callback-wrap--close").click(function(){
+        $(".callback-wrap").animate({
+            right: "-310px"
+        }, 200);
+        $(".callback-preview-wrap").show("slow");
+    });
+
+    //
+    var Course_Title = $(".me-course_description-title__main").text();
+    $("input[name='course_title']").attr('value', Course_Title);
 })();
