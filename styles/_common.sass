@@ -22,6 +22,7 @@ input[placeholder]
 .main
   margin: 0 auto
   max-width: 1580px
+  padding: 0px 10px
 
 .main-title
   font-size: 26px
@@ -95,23 +96,25 @@ input[placeholder]
     color: #fff
     background-color: #e92552
 
+
+
 //Header
-.header--fixed
-  position: fixed
-  left: 0px
-  top: 0px
-  z-index: 99999
-  width: 100%
-  background-color: #fff
-  border-bottom: 1px solid $main-color-theme
+.wrap
+  padding-top: 60px
 .header
   background-color: #fff
   min-height: 60px
+  position: fixed
+  z-index: 99999
+  left: 0px
+  top: 0px
+  width: 100%
+  +box-shadow(0px 0px 3px 0px rgba(0,0,0,0.75))
 .header-block
   +clearfix
 .header-block__logo
   float: left
-  margin-right: 40px
+  margin-right: 20px
 .header-logo
   height: 60px
   padding-left: 10px
@@ -206,13 +209,13 @@ input[placeholder]
   +justify-content(center)
 .me-description-title
   max-width: 800px
-  font-size: 48px
-  line-height: 50px
-  font-family: $Gothic
+  font-size: 60px
+  line-height: 62px
+  font-family: $HelveticaUltra
   color: #fff
   text-align: center
 .me-description-title__span
-  font-family: $GothicBold
+  font-weight: 700
 
 //Button
 .me-button
@@ -1498,8 +1501,8 @@ input[placeholder]
   +align-items(center)
   +justify-content(center)
 .me-about_description__title
-  font-size: 26px
-  font-family: $Gothic
+  font-size: 50px
+  font-family: $HelveticaUltra
   color: #fff
   text-transform: uppercase
   text-align: center
@@ -1511,6 +1514,14 @@ input[placeholder]
   +box-shadow(0px 0px 10px 0px rgba(0,0,0,0.75))
   .main
     height: 100%
+.me-numbers--white
+  background-color: #fff
+  .me-numbers-wrap__number
+    color: #3b4348
+  .me-numbers-wrap__title
+    color: #3b4348
+.me-numbers--grey
+  background-color: #3b4348
 .me-numbers-wrap
   height: 100%
   width: 100%
@@ -1539,20 +1550,28 @@ input[placeholder]
     +order(2)
   .me-numbers-wrap__title
     text-align: right
-.me-bg_image_first, .me-bg_image_second
-  height: 340px
+.me-bg_image_first, .me-bg_image_second, .me-bg_image_third
+  height: 500px
   position: relative
   overflow: hidden
   //background-repeat: no-repeat
   //background-size: cover
 .me-bg_image_first
   img
-    top: 100px
+    top: 0px
+    left: 0px
     width: 100%
     position: absolute
 .me-bg_image_second
   img
-    top: -200px
+    left: 0px
+    bottom: 100px
+    width: 100%
+    position: absolute
+.me-bg_image_third
+  img
+    top: 170px
+    left: 0px
     width: 100%
     position: absolute
 .me-bg_image-layer
@@ -1560,6 +1579,18 @@ input[placeholder]
   height: 100%
   background-color: rgba(#000, 0.4)
 
+.me-bg_image__title
+  max-width: 1200px
+  font-family: $HelveticaUltra
+  font-size: 30px
+  text-align: left
+  color: #fff
+  letter-spacing: 2px
+  opacity: 0
+  +transition(opacity 0.5s linear)
+  .me-about_content-text--color
+    color: #fff
+    font-weight: 700
 .me-about_content
   padding: 60px 0px 0px
   background-image: url("../images/bg_about_content.jpg")
@@ -1879,6 +1910,7 @@ input[placeholder]
   width: 50px
   height: 272px
   position: fixed
+  z-index: 9999
   top: 50%
   margin-top: -136px
   right: 0px
@@ -1915,6 +1947,7 @@ input[placeholder]
     background: url("../images/callback-ico.png") no-repeat
     width: 20px
     height: 20px
+    +transform(rotate(-90deg))
 .callback-wrap__form
   padding: 20px
   box-sizing: border-box
@@ -1953,6 +1986,7 @@ input[placeholder]
   color: #fff
   margin-bottom: 30px
 .callback-wrap--close
+  padding: 3px 5px
   position: absolute
   left: 10px
   top: 10px
@@ -1964,9 +1998,6 @@ input[placeholder]
   border: 1px solid #fff
   cursor: pointer
   +border-radius(50%)
-  +flexbox
-  +justify-content(center)
-  +align-items(center)
 
 //Modal
 #modal_form
@@ -2040,3 +2071,7 @@ input[placeholder]
   font-size: 20px
   font-family: $HelveticaBold
   margin-bottom: 20px
+
+@media all and (max-width: 1440px)
+  .me-about_description, .me-bg_image_first, .me-bg_image_second
+    height: 445px

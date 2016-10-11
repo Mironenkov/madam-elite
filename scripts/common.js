@@ -73,29 +73,58 @@
         $('.me-about_description img').css({
             "transform" : "translate(0%, " + st /20 + "%"
         });
+        $('.me-about_description__title').css({
+            "transform" : "translate(0%, -" + st /2 + "%"
+        });
         $('.me-bg_image_first img').css({
-            "transform" : "translate(0%, -" + st /20 + "%"
+            "transform" : "translate(0%, -" + st /30 + "%"
         });
         $('.me-bg_image_second img').css({
-            "transform" : "translate(0%, " + st /20 + "%"
+            "transform" : "translate(0%, " + st /30 + "%"
         });
+        $('.me-bg_image_third img').css({
+            "transform" : "translate(0%, -" + st /50 + "%"
+        });
+
+        //$(".me-bg_image-title--first").css({
+        //    "transform" : "translate(0%, -" + st /50 + "%"
+        //});
+        //$(".me-bg_image-title--second").css({
+        //    "transform" : "translate(0%, -" + st /50 + "%"
+        //});
+        //$(".me-bg_image-title--whird").css({
+        //    "transform" : "translate(0%, -" + st /50 + "%"
+        //});
 
         if ( st > 100 ) {
             $(".me-numbers-title--first").css("opacity","1");
             $(".me-numbers-number--first").css("opacity","1").animateNumber({ number: 300 }, 1000).removeClass('me-numbers-number--first');
         }
-        if ( st > 450 ) {
+        if ( st > 500 ) {
             $(".me-numbers-title--second").css("opacity","1");
             $(".me-numbers-number--second").css("opacity","1").animateNumber({ number: 12 }, 1000).removeClass('me-numbers-number--second');
         }
-        if ( st > 800 ) {
+        if ( st > 1200 ) {
             $(".me-numbers-title--third").css("opacity","1");
             $(".me-numbers-number--third").css("opacity","1").animateNumber({ number: 100 }, 1000).removeClass('me-numbers-number--third');
         }
-        if ( st > 800 ) {
-            $('.header-block').addClass('header--fixed');
-        } else {
-            $('.header-block').removeClass('header--fixed');
+        if ( st > 1800 ) {
+            $(".me-numbers-title--fourth").css("opacity","1");
+        }
+        if ( st > 250 ) {
+            $(".me-bg_image-title--first").css({
+                "opacity" : "1"
+            });
+        }
+        if ( st > 850 ) {
+            $(".me-bg_image-title--second").css({
+                "opacity" : "1"
+            });
+        }
+        if ( st > 1500 ) {
+            $(".me-bg_image-title--third").css({
+                "opacity" : "1"
+            });
         }
     });
 
@@ -110,12 +139,12 @@
         $(this).hide("slow");
         $(".callback-wrap").animate({
             right: "0px"
-        }, 200);
+        }, 300);
     });
     $(".callback-wrap--close").click(function(){
         $(".callback-wrap").animate({
             right: "-310px"
-        }, 200);
+        }, 300);
         $(".callback-preview-wrap").show("slow");
     });
 
@@ -130,22 +159,22 @@
 
 
     //Modal
-    $('.modal_btn').click( function(event){ // лoвим клик пo ссылки с id="go"
-        event.preventDefault(); // выключaем стaндaртную рoль элементa
-        $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
-            function(){ // пoсле выпoлнения предъидущей aнимaции
+    $('.modal_btn').click( function(event){
+        event.preventDefault();
+        $('#overlay').fadeIn(400,
+            function(){
                 $('#modal_form') 
-                    .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
-                    .animate({opacity: 1, top: '30%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+                    .css('display', 'block')
+                    .animate({opacity: 1, top: '30%'}, 200);
         });
     });
-    /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
-    $('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+
+    $('#modal_close, #overlay').click( function(){
         $('#modal_form')
-            .animate({opacity: 0, top: '35%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-                function(){ // пoсле aнимaции
-                    $(this).css('display', 'none'); // делaем ему display: none;
-                    $('#overlay').fadeOut(400); // скрывaем пoдлoжку
+            .animate({opacity: 0, top: '35%'}, 200,
+                function(){
+                    $(this).css('display', 'none');
+                    $('#overlay').fadeOut(400);
                 }
             );
     });
