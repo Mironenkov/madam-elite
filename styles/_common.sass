@@ -22,7 +22,6 @@ input[placeholder]
 .main
   margin: 0 auto
   max-width: 1580px
-  padding: 0px 10px
 
 .main-title
   font-size: 26px
@@ -1968,3 +1967,76 @@ input[placeholder]
   +flexbox
   +justify-content(center)
   +align-items(center)
+
+//Modal
+#modal_form
+  width: 300px 
+  min-height: 300px
+  box-sizing: border-box
+  background: #fff
+  position: fixed
+  top: 30%
+  left: 50%
+  margin-top: -150px
+  margin-left: -150px
+  display: none
+  opacity: 0
+  z-index: 5
+  padding: 20px 10px
+  +border-radius(5px)
+#modal_form #modal_close
+  width: 21px
+  height: 21px
+  position: absolute
+  top: 10px
+  right: 10px
+  cursor: pointer
+  display: block
+  font-size: 18px
+#overlay
+  z-index: 3
+  position: fixed
+  background-color: #000
+  opacity: 0.5
+  -moz-opacity: 0.5
+  filter: alpha(opacity=50)
+  width: 100% 
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+.modal_form-block
+  text-align: center
+  input
+    display: block
+    margin: 20px auto 0px
+    padding: 10px
+    background-color: #fff
+    box-sizing: border-box
+    border: 1px solid #ccc
+    width: 100%
+    max-width: 240px
+  input[type=submit]
+    color: #fff
+    text-transform: uppercase
+    background-color: $main-color-theme
+    padding: 10px
+    text-align: center
+    box-sizing: border-box
+    font-family: $HelveticaRegular
+    +border-radius(5px)
+    +transition(0.2s linear)
+    &:hover
+      background-color: #e92552
+  .wpcf7-response-output
+    margin: 0px
+.modal_form-block__title
+  font-size: 24px
+  font-family: $HelveticaBold
+  margin-bottom: 20px
+  color: $main-color-theme
+.modal_form-block__name, .modal_form-block__goods-name
+  font-size: 20px
+  font-family: $HelveticaBold
+  margin-bottom: 20px
