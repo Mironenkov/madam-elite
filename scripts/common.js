@@ -9,7 +9,8 @@
         pager: true,
         slideMargin: 0,
         speed: 1000,
-        galleryMargin: 40
+        galleryMargin: 40,
+        enableTouch: false
     });
     $('.me-teacher-slider').lightSlider({
         item: 1,

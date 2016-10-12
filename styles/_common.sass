@@ -208,9 +208,9 @@ input[placeholder]
   +align-items(center)
   +justify-content(center)
 .me-description-title
-  max-width: 800px
+  max-width: 80%
   font-size: 60px
-  line-height: 62px
+  line-height: 1.1
   font-family: $HelveticaUltra
   color: #fff
   text-align: center
@@ -230,13 +230,13 @@ input[placeholder]
 
 //Advantages
 .me-advantages
-  padding: 120px 0px 50px
+  padding: 50px 0px 50px
   .main
     max-width: 1156px
 .me-advantages-wrap
   +flexbox
   +flex-wrap(wrap)
-  +justify-content(space-between)
+  +justify-content(space-around)
 .me-advantages-item
   min-width: 260px
   max-width: 350px
@@ -283,10 +283,9 @@ input[placeholder]
   +justify-content(space-around)
   +flex-wrap(wrap)
 .me-popular__item
-  min-width: 32%
-  max-width: 32%
+  max-width: 510px
   margin: 0px 0px 20px
-  +flex(1 1 0%)
+  +flex(1 1 400px)
 .me-popular__item:nth-child(2), .me-popular__item:nth-child(3n+2)
   margin: 0px 20px 20px
 .me-popular-item
@@ -335,12 +334,12 @@ input[placeholder]
   text-align: center
 .me-popular-price
   font-size: 50px
-  line-height: 56px
+  line-height: 1.1
   color: $main-color-theme
   font-family: $GothicBold
 .me-popular-price__old
   font-size: 24px
-  line-height: 30px
+  line-height: 1.1
   color: #3b4348
   margin-right: 15px
   text-decoration: line-through
@@ -355,22 +354,23 @@ input[placeholder]
 //Courses
 .me-courses-block
   +flexbox
+  +flex-wrap(wrap)
 .me-courses-block__item
-  +flex(1 1 0%)
+  +flex(1 1 500px)
 .me-courses-logo
   position: relative
-  height: 440px
   img
     width: 100%
     height: 100%
+    display: block
 .me-courses-logo__info
   position: absolute
   left: 25px
   bottom: 25px
-.me-courses-logo-info
   padding: 16px 15px 20px
   background-color: rgba(255,255,255,0.7)
   color: $color-text-base
+  box-sizing: border-box
 .me-courses-logo-info__date
   margin-right: 30px
   &::before
@@ -385,9 +385,10 @@ input[placeholder]
     position: relative
     top: 4px
 .me-courses-description-wrap
-  +flexbox
-.me-courses-description
   padding: 30px
+  +flexbox
+  +flex-wrap(wrap)
+.me-courses-description
   text-align: left
   +flex(2 1 0%)
   +order(1)
@@ -418,7 +419,6 @@ input[placeholder]
   width: 160px
 .me-courses-ico
   text-align: right
-  padding: 30px
   +flex(1 1 0%)
   +order(2)
 .me-courses-block:nth-child(even)
@@ -441,6 +441,7 @@ input[placeholder]
 .me-social-wrap
   +flexbox
   +align-items(center)
+  +flex-wrap(wrap)
 .me-social-wrap__text
   font-size: 18px
   line-height: 24px
@@ -466,7 +467,7 @@ input[placeholder]
     color: $main-color-theme
 //Reviews
 .me-reviews
-  padding: 120px 0px 60px
+  padding: 60px 0px 60px
   background-color: #e8e8e8
   .main
     max-width: 1156px
@@ -482,14 +483,14 @@ input[placeholder]
   +flexbox
   +flex-wrap(wrap)
 .me-reviews-block__item
-  +flex(1 1 0%)
+  +flex(1 1 375px)
 .me-reviews-info
   background-color: #fff
   margin: 0px 20px 0px 0px
   position: relative
   padding: 35px
   box-sizing: border-box
-  height: 370px
+  min-height: 370px
   +border-radius(10px)
   &::after
     content: ''
@@ -521,16 +522,19 @@ input[placeholder]
   top: 10px
 .me-reviews-video
   margin-left: 20px
-  height: 370px
+  max-height: 370px
+  height: 100%
   img
     width: 100%
     height: 100%
+    display: block
 
 //Gallery
 .me-gallery-block
   +flexbox
+  +flex-wrap(wrap)
 .me-gallery-block__item
-  +flex(1 1 0%)
+  width: 16.66666%
 .me-gallery-item
   position: relative
   img
@@ -571,12 +575,14 @@ input[placeholder]
   +flexbox
   +flex-wrap(wrap)
 .footer-wrap__item
+  margin-bottom: 20px
   border-right: 1px solid #999999
   padding: 0px 40px
+  box-sizing: border-box
   text-align: center
+  +flex(1 1 190px)
   &:last-child
     border-right: none
-  +flex(1 1 0%)
 .footer--title
   color: #fff
   font-family: $Gothic
@@ -643,7 +649,6 @@ input[placeholder]
   font-size: 14px
   line-height: 20px
 .footer-copy
-  margin-top: 20px
   padding: 0px 10px
   color: #fff
   font-size: 12px
@@ -815,6 +820,8 @@ input[placeholder]
   .me-popular-block__ico
     margin-bottom: 20px
 .me-courses_page
+  .me-courses-description-wrap
+    padding: 0px
   .main
     max-width: 1200px
 .me-courses-description--page
@@ -871,6 +878,7 @@ input[placeholder]
   padding: 80px 0px
   background: url("../images/bg-income.png") no-repeat
   background-size: cover
+  background-position: center
   .main
     max-width: 1200px
 .me-income-item
@@ -1897,6 +1905,7 @@ input[placeholder]
 //Callback
 .callback-wrap
   position: fixed
+  z-index: 9999
   right: -310px
   top: 50%
   margin-top: -15%
@@ -1973,6 +1982,7 @@ input[placeholder]
     &:-ms-input-placeholder
       color: #fff
   input[type=submit]
+    margin: 0px auto
     color: $main-color-theme
     background-color: #fff
     text-transform: uppercase
@@ -2075,3 +2085,217 @@ input[placeholder]
 @media all and (max-width: 1440px)
   .me-about_description, .me-bg_image_first, .me-bg_image_second
     height: 445px
+
+@media all and (max-width: 1439px) and (min-width: 1361px)
+  .header-block__logo, .header-block__phone, .header-nav__li
+    margin-right: 10px
+  .header-logo__text
+    margin-left: 10px
+  .header-logo
+    padding-left: 0px
+
+@media all and (max-width: 1360px)
+  .wrap
+    padding-top: 120px
+  .header-block__logo, .header-block__phone, .header-block__addr
+    margin-right: 0px
+    width: 33%
+    text-align: center
+  .header-logo
+    +justify-content(center)
+  .header-block__nav
+    width: 100%
+    > nav
+      text-align: center
+      > ul > li
+        float: none
+        display: inline-block
+  .header-nav__li
+    margin-right: 10px
+  .me-courses-description-wrap
+    padding: 10px 20px 5px
+  .me-courses-description__share
+    margin-bottom: 20px
+  .me-courses-description__title
+    margin-bottom: 20px
+  .me-popular-price
+    font-size: 40px
+  .me-popular-price__old
+    font-size: 22px
+  .me-popular-item__body
+    height: 340px
+@media all and (max-width: 1024px)
+  .me-description-title
+    font-size: 40px
+  .me-courses-description__share
+    margin-bottom: 10px
+  .me-courses-description__title
+    margin-bottom: 10px
+  .me-popular-item__body
+    height: 300px
+
+@media all and (max-width: 1019px)
+  .me-courses-block
+    margin-bottom: 30px
+  .me-courses-description-wrap
+    padding: 10px 20px 25px
+  .me-courses-description
+    text-align: center
+    margin-right: 10px
+    +flex(10 1 0%)
+  .me-courses-block:nth-child(even)
+    .me-courses-ico
+      +order(2)
+    .me-courses-description
+      text-align: center
+    .me-courses-block__item:first-child
+      +order(2)
+    .me-courses-logo__info
+      left: 25px
+      right: auto
+  .me-courses
+    .main
+      padding: 0px 60px
+@media all and (max-width: 768px)
+  .header
+    position: relative
+  .wrap
+    padding-top: 0px !important
+  .me-description-title
+    font-size: 30px
+  .header-block__logo
+    width: 100%
+    height: 45px
+  .header-block__phone, .header-block__addr
+    width: 50%
+    height: 40px
+  .header-addr, .header-phone
+    height: 40px
+  .header-phone
+    +flexbox
+    +align-items(center)
+    +justify-content(center)
+  .header-nav__link
+    line-height: 35px
+  .me-courses
+    .main
+      padding: 0px 10px
+  .me-courses-description
+    +flex(10 1 619px)
+    +order(3)
+  .me-courses-ico
+    text-align: center
+    margin-bottom: 10px
+  .me-courses-block:nth-child(even)
+    .me-courses-ico
+      text-align: center
+      +order(1)
+  .callback-preview__text
+    color: transparent
+    &::before
+      content: ''
+      left: -4px
+      top: 12px
+      width: 30px
+      height: 30px
+      background-size: cover
+  .callback-preview
+    left: 0px
+    top: 190px
+    width: 70px
+    height: 70px
+    +border-radius(50%)
+  .callback-preview-wrap
+    top: auto
+    bottom: 0px
+    right: 0px
+    width: 80px
+  .callback-wrap
+    margin-top: -30%
+  .me-popular__item:nth-child(2), .me-popular__item:nth-child(3n+2)
+    margin: 0px 0px 20px
+  .me-gallery-block__item
+    width: 33.3333%
+  .me-social-wrap
+    +justify-content(center)
+  .me-social-wrap__text
+    margin-right: 25px
+    margin-bottom: 10px
+  .me-reviews-video
+    margin-left: 0px
+    margin-top: 10px
+  .footer-wrap__item
+    border-right: none
+  .me-courses-block
+    border: 1px solid $main-color-theme
+  .me-courses-logo
+    padding: 20px 20px 0px
+  .header-nav-course
+    top: 35px
+@media all and (max-width: 637px)
+  .wrap
+    padding-top: 155px
+
+@media all and (max-width: 610px)
+  .me-gallery-block__item
+    width: 50%
+  .me-courses-block:nth-child(even) .me-courses-logo__info
+    left: 20px
+    right: auto
+    bottom: 10px
+    width: calc(100% - 40px)
+  .me-courses-logo__info
+    left: 20px
+    right: auto
+    bottom: 10px
+    width: calc(100% - 40px)
+
+@media all and (max-width: 510px)
+  .me-courses-logo-info
+    span
+      display: block
+  .me-courses-logo__info
+    padding: 5px 10px
+@media all and (max-width: 425px)
+  .me-gallery-block__item
+    width: 100%
+  .me-popular-price__old
+    display: block
+    margin-right: 0px
+  .me-social-wrap__text
+    margin-right: 0px
+    text-align: center
+  .me-social-icon
+    margin-right: 10px
+  .me-reviews-info-title
+    +justify-content(center)
+  .me-reviews-info-title__photo
+    margin: 0px
+  .me-reviews-info
+    padding: 15px
+  .me-reviews-info-title__name
+    min-width: 220px
+    text-align: center
+  .callback-wrap
+    height: 380px
+    margin-top: -190px
+  .header-phone
+    font-size: 16px
+  .me-description-title
+    font-size: 22px
+  .header-block__logo
+    height: 55px
+  .header-nav__li
+    margin-right: 9px
+    > a
+      padding: 0px
+  .footer--title
+    font-size: 20px
+    line-height: 22px
+    min-height: 22px
+    font-weight: 700
+    margin-bottom: 20px
+  .footer-wrap__item
+    padding: 0px 20px
+  .me-courses-logo
+    padding: 10px 10px 0px
